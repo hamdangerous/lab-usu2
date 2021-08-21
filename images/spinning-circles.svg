@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="58px" height="58px" viewBox="0 0 58 58" enable-background="new 0 0 58 58" xml:space="preserve">
+<circle fill="#FFFFFF" stroke="#0033FF" stroke-width="1.5" cx="44.602" cy="12.462" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="1;0;0;0;0;0;0;0" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+<circle fill="#FFFFFF" fill-opacity="0" stroke="#0033FF" stroke-width="1.5" cx="51.063" cy="28.063" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="0;1;0;0;0;0;0;0" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+<circle fill="#FFFFFF" fill-opacity="0" stroke="#0033FF" stroke-width="1.5" cx="44.602" cy="43.663" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="0;0;1;0;0;0;0;0" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+<circle fill="#FFFFFF" fill-opacity="0" stroke="#0033FF" stroke-width="1.5" cx="29" cy="50.125" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="0;0;0;1;0;0;0;0" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+<circle fill="#FFFFFF" fill-opacity="0" stroke="#0033FF" stroke-width="1.5" cx="13.399" cy="43.663" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="0;0;0;0;1;0;0;0" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+<circle fill="#FFFFFF" fill-opacity="0" stroke="#0033FF" stroke-width="1.5" cx="6.938" cy="28.063" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="0;0;0;0;0;1;0;0" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+<circle fill="#FFFFFF" fill-opacity="0" stroke="#0033FF" stroke-width="1.5" cx="13.399" cy="12.462" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="0;0;0;0;0;0;1;0" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+<circle fill="#FFFFFF" fill-opacity="0" stroke="#0033FF" stroke-width="1.5" cx="29" cy="6" r="5">
+<animate  fill="remove" restart="always" additive="replace" accumulate="none" repeatCount="indefinite" calcMode="linear" values="0;0;0;0;0;0;0;1" dur="1.3s" begin="0s" attributeName="fill-opacity">
+	</animate>
+</circle>
+</svg>
