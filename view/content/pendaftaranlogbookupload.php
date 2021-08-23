@@ -1,3 +1,17 @@
+<?php
+require_once 'config/koneksi.php';
+
+if( $_SESSION[level] == 0 || $_SESSION[level] == 1) {
+    }else {
+    echo "<h3> Access Denied ! </h3>";
+    echo '<script language="javascript">';
+    echo 'alert("Access Denied !")';
+    echo '</script>';
+    echo '<script>window.location = "index.php";</script>';
+    die();
+  exit();
+}
+?>
 <div class="container-fluid">
 
     <!-- Exportable Table -->

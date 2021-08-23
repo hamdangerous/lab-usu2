@@ -5,6 +5,17 @@ $sql = mysqli_query($con, $q);
 // $q_logbook = "SELECT id_logbook,no_urut,nama,jk_umur,jenis_spesimen,sampel_ke,diagnosa_followup,asal_faskes,pengirim,id_lab,tgl_ambil_sampel,tgl_terima_sampel,tgl_keluar_hasil,hasil_pcr,nik,ct_value,keterangan FROM logbook";
 $q_logbook = "SELECT * FROM logbook";
 $sql_logbook = mysqli_query($con, $q_logbook);
+
+if( $_SESSION[level] == 0 || $_SESSION[level] == 1) {
+}else {
+echo "<h3> Access Denied ! </h3>";
+echo '<script language="javascript">';
+echo 'alert("Access Denied !")';
+echo '</script>';
+echo '<script>window.location = "index.php";</script>';
+die();
+exit();
+}
 ?>
 
 <div class="container-fluid">

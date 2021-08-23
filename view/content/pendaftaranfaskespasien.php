@@ -4,6 +4,17 @@ $q = "select * from faskespasien";
 $sql = mysqli_query($con, $q);
 $q_pasien = "SELECT no,nama,umur,spesimen,sampel,diagnosa,profesi,tgl_ambil,tgl_kirim,rekam,nik,faskes,status FROM faskespasien";
 $sql_pasien = mysqli_query($con, $q_pasien);
+
+if( $_SESSION[level] == 0 || $_SESSION[level] == 4) {
+}else {
+echo "<h3> Access Denied ! </h3>";
+echo '<script language="javascript">';
+echo 'alert("Access Denied !")';
+echo '</script>';
+echo '<script>window.location = "index.php";</script>';
+die();
+exit();
+}
 ?>
 <div class="container-fluid">
 

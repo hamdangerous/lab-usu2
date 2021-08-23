@@ -4,6 +4,17 @@ $q = "select * from wali_kelas";
 $sql = mysqli_query($con, $q);
 $q_wali = "SELECT id_wali,nip,nm_wali,no_hp,alamat FROM wali_kelas";
 $sql_wali = mysqli_query($con, $q_wali);
+
+if( $_SESSION[level] == 0 || $_SESSION[level] == 3) {
+}else {
+echo "<h3> Access Denied ! </h3>";
+echo '<script language="javascript">';
+echo 'alert("Access Denied !")';
+echo '</script>';
+echo '<script>window.location = "index.php";</script>';
+die();
+exit();
+}
 ?>
 <div class="container-fluid">
 

@@ -4,6 +4,18 @@ $q = "select * from faskes";
 $sql = mysqli_query($con, $q);
 $q_faskes = "SELECT nama_faskes,no_hp,alamat FROM faskes";
 $sql_faskes = mysqli_query($con, $q_faskes);
+
+if( $_SESSION[level] == 0 ){
+}else {
+    
+    echo "<h3> Access Denied ! </h3>";
+    echo '<script language="javascript">';
+    echo 'alert("Access Denied !")';
+    echo '</script>';
+    echo '<script>window.location = "index.php";</script>';
+    die();
+  exit();
+}
 ?>
 <div class="container-fluid">
 
