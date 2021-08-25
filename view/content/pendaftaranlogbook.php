@@ -28,6 +28,7 @@ $sql_logbook = mysqli_query($con, $q_logbook);
                             <thead>
                                 <tr>
                                     <th>No. Urut</th>
+                                    <th>QR Code</th>
                                     <th>Nama</th>
                                     <th>JK/Umur</th>
                                     <th>Jenis Spesimen</th>
@@ -48,30 +49,43 @@ $sql_logbook = mysqli_query($con, $q_logbook);
                             </thead>
                             <tbody>
                                 <?php
-                                while ($d = mysqli_fetch_object($sql)) {
-                                    echo "<tr>
-                                                <td>$d->no_urut</td>
-                                                <td>$d->nama</td>
-                                                <td>$d->jk_umur</td>
-                                                <td>$d->jenis_spesimen</td>
-                                                <td>$d->sampel_ke</td>
-                                                <td>$d->diagnosa_followup</td>
-                                                <td>$d->asal_faskes</td>
-                                                <td>$d->pengirim</td>
-                                                <td>$d->id_lab</td>
-                                                <td>$d->tgl_ambil_sampel</td>
-                                                <td>$d->tgl_terima_sampel</td>
-                                                <td>$d->tgl_keluar_hasil</td>
-                                                <td>$d->hasil_pcr</td>
-                                                <td>$d->nik</td>
-                                                <td>$d->ct_value</td>
-                                                <td>$d->keterangan</td>
+                                while ($d = mysqli_fetch_object($sql)) { ?>
+                                    <tr>
+                                                <td><?= $d->no_urut; ?></td>
+                                                <td>
+                                                    <?php
+                                                    require_once 'assets\phpqrcode\qrlib.php';
+
+                                                    $path = 'qrcode/';
+                                                    $file = $path.$d->nik."-".$d->sampel_ke.".png";
+
+                                                    $text =$d->nik."-".$d->sampel_ke;
+                                                    QRcode::png($text,$file);
+                                                    ?>
+                                                    <img src="<?= $path.$d->nik."-".$d->sampel_ke.".png";?>">
+                                                </td>
+                                                <td><?= $d->nama; ?></td>
+                                                <td><?= $d->jk_umur; ?></td>
+                                                <td><?= $d->jenis_spesimen; ?></td>
+                                                <td><?= $d->sampel_ke; ?></td>
+                                                <td><?= $d->diagnosa_followup; ?></td>
+                                                <td><?= $d->asal_faskes; ?></td>
+                                                <td><?= $d->pengirim; ?></td>
+                                                <td><?= $d->id_lab; ?></td>
+                                                <td><?= $d->tgl_ambil_sampel; ?></td>
+                                                <td><?= $d->tgl_terima_sampel; ?></td>
+                                                <td><?= $d->tgl_keluar_hasil; ?></td>
+                                                <td><?= $d->hasil_pcr; ?></td>
+                                                <td><?= $d->nik; ?></td>
+                                                <td><?= $d->ct_value; ?></td>
+                                                <td><?= $d->keterangan; ?></td>
                                                 <td>
                                                     <button class=\"btn btn-primary btn-sm btn-icon\"  onclick=\"edit('$d->id_logbook','m_logbook')\"><i class=\"zmdi zmdi-edit\"></i></button>
                                                     <button class=\"btn btn-primary btn-sm btn-icon\"  onclick=\"hapus('$d->id_logbook','m_logbook')\"><i class=\"zmdi zmdi-close-circle-o\"></i></button>
                                                 </td>
-                                            </tr>";
-                                }
+                                            </tr>
+                                <?php
+                            };
                                 ?>
                             </tbody>
                         </table>
