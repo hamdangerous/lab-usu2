@@ -1,5 +1,17 @@
 <?php
 require_once 'config/koneksi.php';
+
+if( $_SESSION[level] == 0 ){
+}else {
+    
+    echo "<h3> Access Denied ! </h3>";
+    echo '<script language="javascript">';
+    echo 'alert("Access Denied !")';
+    echo '</script>';
+    echo '<script>window.location = "index.php";</script>';
+    die();
+  exit();
+}
 ?>
 <script src="assets/js/pages/charts/Chart.js"></script>
 <script type="text/javascript" src="assets/js/pages/charts/loader.js"></script>

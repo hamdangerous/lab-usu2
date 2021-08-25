@@ -4,6 +4,18 @@ $q = "select * from admin";
 $sql = mysqli_query($con, $q);
 $q_admin = "SELECT username,password,nama,no_hp,alamat,level,keterangan FROM admin";
 $sql_admin = mysqli_query($con, $q_admin);
+
+if( $_SESSION[level] == 0 ){
+}else {
+    
+    echo "<h3> Access Denied ! </h3>";
+    echo '<script language="javascript">';
+    echo 'alert("Access Denied !")';
+    echo '</script>';
+    echo '<script>window.location = "index.php";</script>';
+    die();
+  exit();
+}
 ?>
 <div class="container-fluid">
 

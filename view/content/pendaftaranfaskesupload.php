@@ -1,9 +1,20 @@
 <?php
 require_once 'config/koneksi.php';
-$q = "select * from faskes";
+$q = "select * from berkas_pasien";
 $sql = mysqli_query($con, $q);
-$q_faskes = "SELECT id_faskes,nama_faskes,informsai,file,tipe_file,ukuran,tgl_upload FROM faskes";
+$q_faskes = "SELECT nama_faskes,informasi,file,type,size,tgl_upload FROM berkas_pasien";
 $sql_faskes = mysqli_query($con, $q_faskes);
+
+if( $_SESSION[level] == 0 || $_SESSION[level] == 4) {
+}else {
+echo "<h3> Access Denied ! </h3>";
+echo '<script language="javascript">';
+echo 'alert("Access Denied !")';
+echo '</script>';
+echo '<script>window.location = "index.php";</script>';
+die();
+exit();
+}
 ?>
 <div class="container-fluid">
 
@@ -74,8 +85,8 @@ $sql_faskes = mysqli_query($con, $q_faskes);
                            <td>$d->nama_faskes</td>
                            <td>$d->informasi</td>
                            <td>$d->file</td>
-                           <td>$d->tipe_file</td>
-                           <td>$d->ukuran</td>
+                           <td>$d->type</td>
+                           <td>$d->size</td>
                            <td>$d->tgl_upload</td>
                            </td>
                         </tr>";

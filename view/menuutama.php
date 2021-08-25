@@ -22,7 +22,7 @@
                         <!-- <h4><?= $_SESSION[username] ?></h4>
                         <small><?= $_SESSION[nama] ?></small> -->
                         <strong>Halo <?= $_SESSION[nama] ?></strong>
-                        <br><small>Level : <?= $_SESSION[keterangan] ?></small></br>
+                        <br><small>Level : <?= $_SESSION[keterangan] ?> [<?= $_SESSION[level] ?>]</small></br>
                     </div>
                 </div>
             </li>
@@ -39,8 +39,8 @@
                 <ul class="ml-menu">
                     <li><a href="?page=pendaftaran&form=pasien">Data Pasien</a></li>
                     <li><a href="?page=pendaftaran&form=faskes">Data Faskes</a></li>
-                    <li><a href="?page=pendaftaran&form=wali">Data Ekstraksi</a></li>
                     <li><a href="?page=pendaftaran&form=spp">Data Preparasi</a></li>
+                    <li><a href="?page=pendaftaran&form=wali">Data Ekstraksi</a></li>
                 </ul>
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Master Data</span></a>
@@ -99,9 +99,9 @@
             if( $_SESSION['level'] == 2 ){
             ?>
 
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Data Ekstraksi</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Menu Preparasi</span></a>
                 <ul class="ml-menu">
-                    <li><a href="?page=pendaftaran&form=wali">Data Ekstraksi</a></li>
+                    <li><a href="?page=pendaftaran&form=spp">Data Preparasi</a></li>
                 </ul>
             </li>
 
@@ -117,9 +117,9 @@
             if( $_SESSION['level'] == 3 ){
             ?>
 
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Data Preparasi</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Menu Ekstraksi</span></a>
                 <ul class="ml-menu">
-                    <li><a href="?page=pendaftaran&form=spp">Data Preparasi</a></li>
+                    <li><a href="?page=pendaftaran&form=wali">Data Ekstraksi</a></li>
                 </ul>
             </li>
 
