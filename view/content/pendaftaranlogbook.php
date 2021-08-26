@@ -126,52 +126,77 @@ exit();
                                                     <input type="number" class="form-control" placeholder="Id Logbook" name="id_logbook" readonly />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="no">No. Urut</label>  
                                                     <input type="number" class="form-control" placeholder="No. Urut" name="no_urut" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="nama">Nama Pasien</label>
                                                     <input type="text" class="form-control" placeholder="Nama" name="nama" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="jk_umur">Jenis Kelamin/Umur</label>
                                                     <input type="text" class="form-control" placeholder="JK/Umur" name="jk_umur" required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Jenis Spesimen" name="jenis_spesimen" required />
+                                                <label for="jenis_spesimen">Jenis Spesimen</label>
+                                                    <select name="jenis_spesimen" class="form-control">
+                                                        <option selected>Pilihan</option>
+                                                        <option>NS TS</option>
+                                                        <option>NS</option>
+                                                        <option>TS</option>                                                    
+                                                    </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Sampel Ke" name="sampel_ke" required />
+                                                <label for="sampel_ke">Sampel Ke</label>
+                                                    <input type="number" class="form-control" placeholder="Sampel Ke" name="sampel_ke" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="diagnosa_followup">Diagnosa/Follow Up</label>
                                                     <input type="text" class="form-control" placeholder="Diagnosa/Follow Up" name="diagnosa_followup" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="asal_faskes">Asal Faskes</label>
                                                     <input type="text" class="form-control" placeholder="Asal Faskes" name="asal_faskes" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="pengirim">Pengirim</label>
                                                     <input type="text" class="form-control" placeholder="Pengirim" name="pengirim" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="id_lab">ID LAB</label>
                                                     <input type="text" class="form-control" placeholder="ID LAB" name="id_lab" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="tgl_ambil_sampel">Tgl Ambil Sampel</label>
                                                     <input type="date" class="form-control" placeholder="Tanggal Ambil Sampel" name="tgl_ambil_sampel" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="tgl_terima_sampel">Tgl Terima Sampel</label>
                                                     <input type="date" class="form-control" placeholder="Tanggal Terima Sampel" name="tgl_terima_sampel" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="tgl_keluar_hasil">Tgl Keluar Hasil</label>
                                                     <input type="date" class="form-control" placeholder="Tanggal Keluar Hasil" name="tgl_keluar_hasil" required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Hasil PCR" name="hasil_pcr" required />
+                                                <label for="hasil_pcr">Hasil PCR</label>
+                                                    <select name="hasil_pcr" class="form-control">
+                                                        <option selected>Pilihan</option>
+                                                        <option>Positif</option>
+                                                        <option>Negatif</option>                                                 
+                                                    </select>
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="nik">NIK</label>
                                                     <input type="number" class="form-control" placeholder="NIK" name="nik" maxlength="16" required />
                                                 </div>
                                                 <div class="form-group">
+                                                <label for="ct_value">CT Value</label>
                                                     <input type="text" class="form-control" placeholder="CT Value" name="ct_value" required />
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Keterangan" name="keterangan" required />
+                                                <label for="keterangan">Keterangan</label>
+                                                    <textarea class="form-control" placeholder="Keterangan" name="keterangan" required /></textarea>
                                                 </div>
                                             </div>
                                         </div>
