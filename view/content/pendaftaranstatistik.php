@@ -40,15 +40,15 @@ if( $_SESSION[level] == 0 ){
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Mushrooms', 1],
-          ['Onions', 1],
-          ['Olives', 2],
-          ['Zucchini', 2],
-          ['Pepperoni', 1]
+          ['Faskes Kab. Deli Serdang', 7],
+          ['Faskes Kab. Sunggal', 6],
+          ['Faskes Kab. Toba', 23],
+          ['Faskes Binjai', 12],
+          ['Faskes Langkat', 11]
         ]);
 
         // Set options for Sarah's pie chart.
-        var options = {title:'How Much Pizza Sarah Ate Last Night',
+        var options = {title:'Jumlah Faskes',
                        width:400,
                        height:300};
 
@@ -65,15 +65,14 @@ if( $_SESSION[level] == 0 ){
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Mushrooms', 2],
-          ['Onions', 2],
-          ['Olives', 2],
-          ['Zucchini', 0],
-          ['Pepperoni', 3]
+          ['Laki-Laki', 54452],
+          ['Wanita', 75442],
+          ['Positif', 44442],
+          ['Negatif', 58755],
         ]);
 
         // Set options for Anthony's pie chart.
-        var options = {title:'How Much Pizza Anthony Ate Last Night',
+        var options = {title:'Total Data Logbook',
                        width:400,
                        height:300};
 
