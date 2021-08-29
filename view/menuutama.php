@@ -22,7 +22,7 @@
                         <!-- <h4><?= $_SESSION[username] ?></h4>
                         <small><?= $_SESSION[nama] ?></small> -->
                         <strong>Halo <?= $_SESSION[nama] ?></strong>
-                        <br><small>Level : <?= $_SESSION[keterangan] ?> [<?= $_SESSION[level] ?>]</small></br>
+                        <br><small>Level [<?= $_SESSION[level] ?>] : <?= $_SESSION[keterangan] ?> </small></br>
                     </div>
                 </div>
             </li>
@@ -38,6 +38,7 @@
                         Lab</span></a>
                 <ul class="ml-menu">
                     <li><a href="?page=pendaftaran&form=pasien">Data Pasien</a></li>
+                    <li><a href="?page=pendaftaran&form=faskesuploadpasien">Data Pasien Upload</a></li>
                     <li><a href="?page=pendaftaran&form=faskes">Data Faskes</a></li>
                     <li><a href="?page=pendaftaran&form=spp">Data Preparasi</a></li>
                     <li><a href="?page=pendaftaran&form=wali">Data Ekstraksi</a></li>
@@ -74,10 +75,30 @@
 
             <!-- End Superadmin -->
 
-            <!-- Start Admin Logbook -->
+            <!-- Start Admin Penerimaan -->
 
             <?php
             if( $_SESSION['level'] == 1 ){
+            ?>
+
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-accounts-list"></i><span>Data
+                        Lab</span></a>
+                <ul class="ml-menu">
+                    <li><a href="?page=pendaftaran&form=pasien">Data Pasien</a></li>
+                    <li><a href="?page=pendaftaran&form=faskesuploadpasien">Data Pasien Upload</a></li>
+                    <li><a href="?page=pendaftaran&form=faskes">Data Faskes</a></li>
+
+
+            <?php
+            }
+            ?>
+
+            <!-- End Admin Logbook -->
+
+            <!-- Start Admin Logbook -->
+
+            <?php
+            if( $_SESSION['level'] == 2 ){
             ?>
 
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Master Data</span></a>
@@ -93,10 +114,10 @@
 
             <!-- End Admin Logbook -->
 
-            <!-- Start Admin Logbook -->
+            <!-- Start Admin Preparasi -->
 
             <?php
-            if( $_SESSION['level'] == 2 ){
+            if( $_SESSION['level'] == 3 ){
             ?>
 
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Menu Preparasi</span></a>
@@ -109,12 +130,12 @@
             }
             ?>
 
-            <!-- End Admin Logbook -->
+            <!-- End Admin Preparasi -->
 
-            <!-- Start Admin Logbook -->
+            <!-- Start Admin Ekstraksi -->
 
             <?php
-            if( $_SESSION['level'] == 3 ){
+            if( $_SESSION['level'] == 4 ){
             ?>
 
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Menu Ekstraksi</span></a>
@@ -127,12 +148,12 @@
             }
             ?>
 
-            <!-- End Admin Logbook -->
+            <!-- End Admin Ekstraksi -->
 
-            <!-- Start Admin Logbook -->
+            <!-- Start Admin Faskes -->
 
             <?php
-            if( $_SESSION['level'] == 4 ){
+            if( $_SESSION['level'] == 5 ){
             ?>
 
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Menu Faskes</span></a>
@@ -146,7 +167,7 @@
             }
             ?>
 
-            <!-- End Admin Logbook -->
+            <!-- End Admin Faskes -->
 
         </ul>
     </div>
