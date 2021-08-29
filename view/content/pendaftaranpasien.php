@@ -5,7 +5,7 @@ $sql = mysqli_query($con, $q);
 $q_pasien = "SELECT no,nama,umur,spesimen,sampel,diagnosa,profesi,tgl_ambil,tgl_kirim,rekam,nik,ket,status FROM pasien";
 $sql_pasien = mysqli_query($con, $q_pasien);
 
-if( $_SESSION[level] == 0 ){
+if( $_SESSION[level] == 0 || $_SESSION[level] == 1) {
 }else {
     
     echo "<h3> Access Denied ! </h3>";

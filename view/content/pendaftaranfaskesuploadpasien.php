@@ -5,7 +5,7 @@ $sql = mysqli_query($con, $q);
 $q_faskes = "SELECT nama_faskes,informasi,file,type,size,tgl_upload FROM berkas_pasien";
 $sql_faskes = mysqli_query($con, $q_faskes);
 
-if( $_SESSION[level] == 0 || $_SESSION[level] == 5) {
+if( $_SESSION[level] == 0 || $_SESSION[level] == 1) {
 }else {
 echo "<h3> Access Denied ! </h3>";
 echo '<script language="javascript">';
@@ -30,7 +30,7 @@ exit();
                             Faskes</button> -->
                         </li>
                     </ul>
-                </div>
+                <!-- </div>
                 <div class="body">
                     <div class="table-responsive">
                     <form enctype="multipart/form-data" method="POST" action="upload.php">
@@ -59,7 +59,7 @@ exit();
                         <input type="submit" class="btn btn-lg btn-success" value="Upload">
                         </center>
                      </form>
-</div>
+</div> -->
 
 <div class="col-lg"></div>
                </div>
@@ -76,6 +76,7 @@ exit();
                            <th style="width:20%">Type File</th>
                            <th style="width:20%">Ukuran File</th>
                            <th style="width:20%">Tgl Upload</th>
+                           <th style="width:20%">Download</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -88,6 +89,7 @@ exit();
                            <td>$d->type</td>
                            <td>$d->size</td>
                            <td>$d->tgl_upload</td>
+                           <td>'Download'</td>
                            </td>
                         </tr>";
                      }

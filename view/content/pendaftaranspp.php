@@ -5,7 +5,7 @@ $sql = mysqli_query($con, $q);
 $q_pegawai = "SELECT id_spp,nis,bulan,jumlah FROM spp";
 $sql_pegawai = mysqli_query($con, $q_pegawai);
 
-if( $_SESSION[level] == 0 || $_SESSION[level] == 2) {
+if( $_SESSION[level] == 0 || $_SESSION[level] == 3) {
 }else {
 echo "<h3> Access Denied ! </h3>";
 echo '<script language="javascript">';

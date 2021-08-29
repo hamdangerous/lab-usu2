@@ -5,7 +5,7 @@ $sql = mysqli_query($con, $q);
 $q_wali = "SELECT id_wali,nip,nm_wali,no_hp,alamat FROM wali_kelas";
 $sql_wali = mysqli_query($con, $q_wali);
 
-if( $_SESSION[level] == 0 || $_SESSION[level] == 3) {
+if( $_SESSION[level] == 0 || $_SESSION[level] == 4) {
 }else {
 echo "<h3> Access Denied ! </h3>";
 echo '<script language="javascript">';

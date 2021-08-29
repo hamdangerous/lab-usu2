@@ -6,7 +6,7 @@ $sql = mysqli_query($con, $q);
 $q_logbook = "SELECT * FROM logbook";
 $sql_logbook = mysqli_query($con, $q_logbook);
 
-if( $_SESSION[level] == 0 || $_SESSION[level] == 1) {
+if( $_SESSION[level] == 0 || $_SESSION[level] == 2) {
 }else {
 echo "<h3> Access Denied ! </h3>";
 echo '<script language="javascript">';

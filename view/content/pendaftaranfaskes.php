@@ -5,7 +5,7 @@ $sql = mysqli_query($con, $q);
 $q_faskes = "SELECT nama_faskes,no_hp,alamat FROM faskes";
 $sql_faskes = mysqli_query($con, $q_faskes);
 
-if( $_SESSION[level] == 0 ){
+if( $_SESSION[level] == 0 || $_SESSION[level] == 1) {
 }else {
     
     echo "<h3> Access Denied ! </h3>";

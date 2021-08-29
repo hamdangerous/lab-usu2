@@ -5,7 +5,7 @@ $sql = mysqli_query($con, $q);
 $q_pasien = "SELECT no,nama,umur,spesimen,sampel,diagnosa,profesi,tgl_ambil,tgl_kirim,rekam,nik,faskes,status FROM faskespasien";
 $sql_pasien = mysqli_query($con, $q_pasien);
 
-if( $_SESSION[level] == 0 || $_SESSION[level] == 4) {
+if( $_SESSION[level] == 0 || $_SESSION[level] == 5) {
 }else {
 echo "<h3> Access Denied ! </h3>";
 echo '<script language="javascript">';
@@ -160,7 +160,7 @@ exit();
                                                 </div>
                                                 <div class="form-group">
                                                 <label for="ket">Faskes</label>
-                                                    <input type="text" class="form-control" placeholder="<?php $_SESSION[nama] ?>" name="faskes" value="<?php $_SESSION[nama] ?>" readonly />
+                                                    <input type="text" class="form-control" name="faskes" placeholder="<?= $_SESSION[nama] ?>" value="" readonly /> 
                                                 </div>
                                             </div>
                                         </div>

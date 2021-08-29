@@ -1,7 +1,7 @@
 <?php
 require_once 'config/koneksi.php';
 
-if( $_SESSION[level] == 0 || $_SESSION[level] == 1) {
+if( $_SESSION[level] == 0 || $_SESSION[level] == 2) {
     }else {
     echo "<h3> Access Denied ! </h3>";
     echo '<script language="javascript">';
