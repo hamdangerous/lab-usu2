@@ -9,6 +9,9 @@ $d = $_POST;
 $aksi = $d['aksi'];
 $data = '';
 
+$_SESSION[nama] = "$faskes";
+$faskes='nama';
+
 if ($aksi == 'input') {
     $q = "INSERT INTO faskespasien (no,nama,umur,spesimen,sampel,diagnosa,profesi,tgl_ambil,tgl_kirim,rekam,nik,ket,faskes) values('$d[no]','$d[nama]','$d[umur]','$d[spesimen]','$d[sampel]','$d[diagnosa]','$d[profesi]','$d[tgl_ambil]','$d[tgl_kirim]','$d[rekam]','$d[nik]','$d[ket]','$d[faskes]')";
     $sql = mysqli_query($con, $q);
